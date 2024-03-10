@@ -141,7 +141,6 @@ function resetscore() {
   pontuacao = 1;
   score.innerHTML = 0;
   salvarPontuacao();
-  jogoAtivo = true;
 }
 
 function reset() {
