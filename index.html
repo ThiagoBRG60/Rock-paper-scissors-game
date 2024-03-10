@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <title>Pedra, Papel e Tesoura</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="game-header">
+        <div class="name">
+          <h1>Pedra</h1>
+          <h1>Papel</h1>
+          <h1>Tesoura</h1>
+        </div>
+        <div class="game-score">
+          <p>Pontuação</p>
+          <span class="score"></span>
+        </div>
+      </div>
+      <button onclick="resetscore()">Reiniciar pontos</button>
+    </header>
+
+    <main>
+      <section>
+        <p class="players">Você escolheu</p>
+        <p class="computer">Computador escolheu</p>
+        <div class="choice">
+          <div class="paper">
+            <button type="button" class="paper-button">
+              <img src="./images/paper.png" alt="" />
+            </button>
+          </div>
+          <div class="reset-game">
+            <p></p>
+            <span onclick="reset()" class="restart">Jogar denovo</span>
+          </div>
+          <div class="scissors">
+            <button type="button" class="scissors-button">
+              <img src="./images/scissors.png" alt="" />
+            </button>
+          </div>
+          <div class="rock">
+            <button type="button" class="rock-button">
+              <img src="./images/rock.png" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
