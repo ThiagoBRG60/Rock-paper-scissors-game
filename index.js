@@ -41,20 +41,17 @@ function clickHandler(index) {
     }
 
     if (index == 0 && computer == 0) {
-      buttons[1].classList.remove("selected");
-      buttons[1].classList.remove("scissors-button");
+      buttons[1].classList.remove("selected", 'scissors-button');
       buttons[1].classList.add("paper-button");
       buttons[1].innerHTML = `<img src="./images/paper.png" alt="" />`;
       divs[1].classList.add("playertwo");
     } else if (index == 1 && computer == 1) {
-      buttons[0].classList.remove("selected");
-      buttons[0].classList.remove("paper-button");
+      buttons[0].classList.remove("selected", "paper-button");
       buttons[0].classList.add("scissors-button");
       divs[0].classList.add("playertwo");
       buttons[0].innerHTML = `<img src="./images/scissors.png" alt="" />`;
     } else if (index == 2 && computer == 2) {
-      buttons[1].classList.remove("selected");
-      buttons[1].classList.remove("scissors-button");
+      buttons[1].classList.remove("selected", "scissors-button");
       buttons[1].classList.add("rock-button");
       buttons[1].innerHTML = `<img src="./images/rock.png" alt="" />`;
       divs[1].classList.add("playertwo");
@@ -74,8 +71,7 @@ playGame();
 
 function removeee() {
   buttons[1].classList.add("scissors-button");
-  buttons[1].classList.remove("paper-button");
-  buttons[1].classList.remove("rock-button");
+  buttons[1].classList.remove("paper-button", "rock-button");
   buttons[1].innerHTML = `<img src="./images/scissors.png" alt="" />`;
 
   buttons[0].classList.add("paper-button");
@@ -93,8 +89,7 @@ function ganhou(index, computer) {
   resultadoTexto.innerHTML = "Você ganhou";
   resultadoTexto.classList.add("restart-game");
   buttons[index].classList.add("winner");
-  restartGame.classList.add("restart-game");
-  restartGame.classList.add("winnerText");
+  restartGame.classList.add("restart-game", "winnerText");
   playerChoice.classList.add("choiceText");
   computerChoice.classList.add("choiceText");
 }
